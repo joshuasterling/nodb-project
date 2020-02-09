@@ -6,18 +6,42 @@ let fighterArray = []
 module.exports = {
   getUnknownFighters: async(req, res) => {
     await axios.get(`https://dragon-ball-api.herokuapp.com/api/character/`).then(response => {
-      fighterArray.push(response.data)
-      res.status(200).send(allFightersArray)
+      allFightersArray = response.data
+
+      const rand1 = Math.floor(Math.random() * (allFightersArray.length))
+      const rand2 = Math.floor(Math.random() * (allFightersArray.length))
+      const rand3 = Math.floor(Math.random() * (allFightersArray.length))
+      const rand4 = Math.floor(Math.random() * (allFightersArray.length))
+      const rand5 = Math.floor(Math.random() * (allFightersArray.length))
+      const rand6 = Math.floor(Math.random() * (allFightersArray.length))
+      const rand7 = Math.floor(Math.random() * (allFightersArray.length))
+
+      if (fighterArray.length > 0) {
+        fighterArray = []
+      }
+
+      fighterArray.push(allFightersArray[rand1], allFightersArray[rand2], allFightersArray[rand3], allFightersArray[rand4], allFightersArray[rand5], allFightersArray[rand6], allFightersArray[rand7])
+
+      res.status(200).send(fighterArray)
     })
   },
 
-  getRandomFighter: (req, res) => {
-    const rand1 = Math.ceil(Math.random() * allFightersArray.length - 1)
-    const rand2 = Math.ceil(Math.random() * allFightersArray.length - 1)
-    const rand3 = Math.ceil(Math.random() * allFightersArray.length - 1)
-    const rand4 = Math.ceil(Math.random() * allFightersArray.length - 1)
-    const rand5 = Math.ceil(Math.random() * allFightersArray.length - 1)
-    const rand6 = Math.ceil(Math.random() * allFightersArray.length - 1)
-    const rand7 = Math.ceil(Math.random() * allFightersArray.length - 1)
+  getNewFighters: (req, res) => {
+    const rand1 = Math.floor(Math.random() * (allFightersArray.length))
+    const rand2 = Math.floor(Math.random() * (allFightersArray.length))
+    const rand3 = Math.floor(Math.random() * (allFightersArray.length))
+    const rand4 = Math.floor(Math.random() * (allFightersArray.length))
+    const rand5 = Math.floor(Math.random() * (allFightersArray.length))
+    const rand6 = Math.floor(Math.random() * (allFightersArray.length))
+    const rand7 = Math.floor(Math.random() * (allFightersArray.length))
+
+    if (fighterArray.length > 0) {
+      fighterArray = []
+    }
+
+    fighterArray.push(allFightersArray[rand1], allFightersArray[rand2], allFightersArray[rand3], allFightersArray[rand4], allFightersArray[rand5], allFightersArray[rand6], allFightersArray[rand7])
+
+    res.status(200).send(fighterArray)
   }
 }
+

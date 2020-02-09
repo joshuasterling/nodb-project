@@ -1,12 +1,13 @@
 import React from 'react'
+import '../App.css'
 
 class Dragonball extends React.Component {
   constructor(props) {
     super(props)
 
-    // this.state = {
-    //   dragonballClicked: false
-    // }
+    this.state = {
+      dragonballClicked: false
+    }
   }
 
   checkDragonball() {
@@ -16,7 +17,12 @@ class Dragonball extends React.Component {
   render() {
     return (
       <div>
-        Dragonball.js
+        <p className='fighter-name'>{this.props.fighter.name}</p>
+        <button className='button' onClick={() => {
+          this.props.chooseFighter({
+            name: this.props.fighter.name
+          })
+        }} > Select Fighter </button>
       </div>
     )
   }

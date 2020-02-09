@@ -2,37 +2,77 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-image: url(https://www.elsetge.cat/myimg/f/124-1246688_kamehameha-goku-gohan-wallpaper-and-background-fondos-de.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  padding: 50px;
+  font-size: 3rem;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.fighter-container {
+  font-size: 2rem;
+  font-weight: 900;
+  /* padding: 10px; */
+}
+
+.fighting-team {
+  font-size: 6rem;
+  padding: 30px;
+}
+
+.fighters {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.layer {
+  margin: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fighter-name {
+  font-size: 2rem;
+  font-weight: 900;
+  padding: 10px;
+}
+
+.finder {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button {
+  width: 10vw;
+  height: 5vh;
+  background-color: orangered;
+  font-size: 1.2rem;
+  font-weight: 900;
+  border: 2px solid black;
+}
+
+.button-2 {
+  width: 3vw;
+  height: 3vh;
+  background-color: darkseagreen;
+  font-size: 0.5rem;
+  font-weight: 900;
+  border: 2px solid black;
+}
+
+.button-3 {
+  width: 25vw;
+  height: 10vh;
+  background-color: dodgerblue;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-top: 40px;
+  margin-bottom: 0;
+  border: 2px solid black;
 }
