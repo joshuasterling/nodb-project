@@ -32,9 +32,6 @@ module.exports = {
           allFightersArray[rand7]
         );
 
-        // fighterArray[0].img =
-        // "https://cpng.pikpng.com/pngl/s/75-752662_best-deck-in-dragon-ball-super-card-game.png";
-
         res.status(200).send(fighterArray);
       });
   },
